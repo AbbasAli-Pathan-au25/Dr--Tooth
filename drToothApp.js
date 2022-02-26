@@ -2,6 +2,7 @@
 const express=require("express")
 const app=express()
 const {engine}=require("express-handlebars")
+
 const mongoose=require("mongoose")
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
@@ -266,7 +267,7 @@ app.get("/user",auth,async(req,res)=>{
         }
     })
 })
-const port=process.env.port||3000
+const port=process.env.PORT||3000
 
 app.listen(port,()=>{
     console.log("Dr Tooth Server is running............")
